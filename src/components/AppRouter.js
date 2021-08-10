@@ -8,7 +8,6 @@ import { Context } from "../index";
 export default function AppRouter() {
     const { auth } = useContext(Context);
     const [user] = useAuthState(auth);
-    console.log(user);
     return user ? (
         <Switch>
             {privateRoutes.map(({ path, Component }) => (
